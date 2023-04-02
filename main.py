@@ -1,11 +1,12 @@
 import sys
 import json
+import os
 import subprocess
 
 from src.visualization.utils import plot_dependance
 
 
-SRC_DIR = '/home/yulia/projects/regex_matcher/src'
+SRC_DIR = os.environ['REGEX_MATCHER_ROOT'] + '/src'
 
 
 def execute(paths, word, regex, target, timeout=3):
