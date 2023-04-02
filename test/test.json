@@ -1,0 +1,1 @@
+{"languages": "","target_file": "test/results.txt","regex": "((a*)*)*","attack_group": {"prefix": "","pump": "a","suffix": "b","limit": 15},"visual_file":"test/visual.png"}

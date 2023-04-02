@@ -1,0 +1,4 @@
+{"input": "aaaaaaaaaaaaaab", "regex": "((a*)*)*", "language": "python", "length": 15, "matched": false, "valid": true, "time": 57.545094961009454}
+{"input": "aaaaaaaaaaaaaaaab", "regex": "((a*)*)*", "language": "python", "length": 17, "matched": false, "valid": true, "time": 886.9845238109992}
+{"input": "aaaaaaaaaaaaaaab", "regex": "((a*)*)*", "language": "python", "length": 16, "matched": false, "valid": true, "time": 233.4693307770067}
+{"input":"aaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":23,"matched":false,"time":1264.5650000572205}

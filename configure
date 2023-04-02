@@ -1,0 +1,99 @@
+#!/usr/bin/env perl
+
+# SKIP_PKG_DEPS=1 
+
+use strict;
+use warnings;
+
+my $SKIP_PKG_DEPS;
+if (defined $ENV{SKIP_PKG_DEPS} and $ENV{SKIP_PKG_DEPS}) {
+  $SKIP_PKG_DEPS = 1;
+} else {
+  $SKIP_PKG_DEPS = 0;
+}
+my $INSTALL_PKG_DEPS = not $SKIP_PKG_DEPS;
+
+if (not defined $ENV{REGEX_MATCHER_ROOT}) {
+  die "Error, you must define REGEX_MATCHER_ROOT\n";
+}
+
+# Linux or bust
+my $os = $^O;
+if ($os ne "linux") {
+  die "Error, $os is unsupported. Only works on Linux\n";
+}
+
+# Ubuntu or bust
+my $osRelease = `cat /etc/os-release 2>/dev/null`;
+if ($osRelease !~ m/NAME="Ubuntu"/i) {
+  die "Error, only Ubuntu is supported. Your machine is:\n$osRelease\n";
+}
+
+&log("Configuring repo");
+
+if ($INSTALL_PKG_DEPS) {
+  my @miscPackages_ubuntu = ("zip", "unzip", "make", "git", "wget", "vim");
+  my @rxxr2Packages_ubuntu = ("ocaml");
+  my @wustholzPackages_ubuntu = ("default-jdk");
+  my @shenPackages_ubuntu = ("maven");
+  my @dynamicAnalysisPackages_ubuntu = ("nodejs", "cargo", "golang-go", "python3-bs4");
+  my @requiredPackages_ubuntu = (@miscPackages_ubuntu, @rxxr2Packages_ubuntu, @wustholzPackages_ubuntu, @shenPackages_ubuntu, @dynamicAnalysisPackages_ubuntu);
+  
+  &log("Installing dependencies");
+  &chkcmd("sudo apt-get install -y @requiredPackages_ubuntu");
+}
+else {
+  &log("Skipping installation of packages. Hope you did a local install correctly");
+}
+
+# Validators
+&log("Configuring validators");
+&configureValidators();
+
+&log("Configuration complete");
+exit 0;
+
+sub configureValidators {
+  # Rust
+  &log("Building Rust validator");
+  chdir "$ENV{REGEX_MATCHER_ROOT}/src/rust" or die "Error, chdir failed: $!\n";
+  &chkcmd("make");
+
+  # Go
+  &log("Building Go validator");
+  chdir "$ENV{REGEX_MATCHER_ROOT}/src/go" or die "Error, chdir failed: $!\n";
+  &chkcmd("make");
+
+  # Java
+  &log("Building Java validator");
+  chdir "$ENV{REGEX_MATCHER_ROOT}/src/java" or die "Error, chdir failed: $!\n";
+  &chkcmd("mvn clean compile; mvn clean package");
+
+  ## Reset pwd
+  chdir "$ENV{REGEX_MATCHER_ROOT}" or die "Error, chdir failed: $!\n";
+
+  return;
+}
+
+####################
+# Utility
+####################
+
+sub chkcmd {
+  my ($cmd) = @_;
+
+  &log("$cmd");
+  my $out = `$cmd`;
+
+  my $rc = $? >> 8;
+  if ($rc) {
+    die "Error, $cmd gave rc $rc:\n$out\n";
+  }
+
+  return $out;
+}
+
+sub log {
+  my ($msg) = @_;
+  print STDOUT "$msg\n";
+}
