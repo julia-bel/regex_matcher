@@ -1,13 +1,31 @@
 # Regex Matcher
+Matching regular expressions with words or groups of pumping words in Java, Python, Javascript, Go, Rust and measuring time consuming.
 
 ## Installing
-1. Set the environment variable `REGEX_MATCHER_ROOT=../regex_matcher`
-2. Set configuration `perl configure`
-3. Run `pip install -r requirements.txt`
+1. Install packages
+```
+sudo apt-get install make default-jdk maven nodejs cargo golang-go python3-pip
+```
+2. Set the environment variable `REGEX_MATCHER_ROOT={path}/regex_matcher`
+3. Configure files
+```
+# go
+cd $REGEX_MATCHER_ROOT/src/go
+make
+
+# java
+cd $REGEX_MATCHER_ROOT/src/java
+mvn clean compile; mvn clean package
+
+# rust
+cd $REGEX_MATCHER_ROOT/src/rust
+make
+```
+3. Install requirements `pip install -r requirements.txt`
 
 ## Matching
 ```
-python main.py filename.json
+python3 main.py filename.json
 ```
 
 filename.json
@@ -31,7 +49,7 @@ filename.json
 
 ## Example
 ```
-python main.py test/test.json
+python3 main.py test/test.json
 ```
 <p align="center">
     <img src="test/visual.png"/>
