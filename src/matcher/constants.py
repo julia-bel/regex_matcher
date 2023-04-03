@@ -3,7 +3,7 @@ LANGUAGE_MAP = {
     'python': 'src/python/query-python.py',
     'rust': 'src/rust/target/release/query-rust',
     'go': 'src/go/query-go',
-    'java': 'src/java/query-java.pl',
+    'java': 'src/java/query-java.sh',
 }
 
 MATCHING_PARAMS = [
