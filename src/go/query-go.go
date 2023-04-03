@@ -9,13 +9,13 @@ import (
 )
 
 type MatchResult struct {
-    Regex string               `json:"regex"`
     Input string               `json:"input"`
-    Length int                 `json:"length"`
+    Regex string               `json:"regex"`
+    Language string            `json:"language"`
     Valid bool                 `json:"valid"`
+    Length int                 `json:"length"`
     Matched bool               `json:"matched"`
     Time float64               `json:"time"`
-    Language string            `json:"language"`
 }
 
 func myLog(str string) {

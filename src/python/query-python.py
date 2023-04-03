@@ -7,18 +7,15 @@ import time
 
 
 def main():
-    if len(sys.argv) != 3:
-        print(sys.argv)
-        print(f'Error, usage: {sys.argv[0]} input regex')
-        sys.exit(1)
+    assert len(sys.argv) == 3, f'usage: {sys.argv[0]} input regex'
 
     result = {
         'input': sys.argv[1],
         'regex': sys.argv[2],
         'language': 'python',
+        'valid': False,
         'length': len(sys.argv[1]),
         'matched': False,
-        'valid': False,
         'time': 0,
     }
 
@@ -37,7 +34,7 @@ def main():
     sys.stdout.write(json.dumps(result) + '\n')
 
 
-def log(msg):
+def log(msg: str):
     sys.stderr.write(msg + '\n')
 
 

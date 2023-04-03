@@ -1,28 +1,26 @@
 use std::env;
 use std::time::Instant;
 
-extern crate serde;
-#[macro_use]
 extern crate serde_json;
-
-extern crate serde_derive;
+use serde_json::json;
 
 extern crate regex;
 use regex::Regex;
+
 
 fn main() {
     let args: Vec<String> = env::args().collect();
     let input = &args[1];
     let regex = &args[2];
     let pattern = "^".to_owned() + regex + "$";
-    let mut result: serde_json::Value = json!({
+    let mut result = json!({
         "input": &input,
+        "regex": &regex,
         "language": "rust",
-		"regex": &regex,
+		"valid": false,
 		"length": input.len(),
-        "valid": false,
         "matched": false,
-        "time": 0,
+        "time": 0.0,
 	});
 
     match Regex::new(&pattern) {
@@ -30,9 +28,9 @@ fn main() {
             result["valid"] = json!(true);
             let start = Instant::now();
             result["matched"] = json!(re.is_match(&input));
-            result["time"] = json!(start.elapsed().as_secs());
+            result["time"] = json!(start.elapsed().as_secs_f64());
         }
-        Err(error) => {}
+        Err(_) => {}
     }
     println!("{}", result.to_string());
 }

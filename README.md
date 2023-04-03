@@ -13,17 +13,19 @@ python main.py filename.json
 filename.json
 ```
 {
-    "languages": List[str] | "" | str, // if "" then all machines are used
-    "target_file": str, // optipnal
-    "regex": str,
-    "word": str,
-    "attack_group": {   // optional 
-        "prefix": str,
-        "pump": str,
-        "suffix": str,
-        "limit": int (max iteration of pumping)
-    }
-    "visual_file": str, // optional for dependency visualization
+    'regex': str, (target_file regex)
+    'word': str,  (optional, input to match)
+    'attack_group': Dict[str, Any], (optional, dictionary of the format
+        {
+            'prefix': str,
+            'pump': str,
+            'suffix': str,
+            'steps': List[int], ([start, end, step], interval: [start, end))
+        })
+    'languages': List[str], (optional, languages to use, None means all)
+    'target_file': str, (optional, file to save matching results)
+    'visual_file': str, (optional, file to save visualization results)
+    'encoding': str, (optional, global encoding, defaults to 'utf-8')
 }
 ```
 
