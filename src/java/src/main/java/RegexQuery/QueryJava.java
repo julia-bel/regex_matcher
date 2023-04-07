@@ -28,16 +28,14 @@ public class QueryJava {
 			try {
 				pattern = Pattern.compile(regex);
 				valid = true;
-			} catch (Exception e) {
-				log("Exception compiling regex: " + e);
-			}
-			if (valid) {
 				Matcher matcher = pattern.matcher(input);
 				long start = System.nanoTime();
 				matched = matcher.matches();
 				// matched = matcher.find();
 				long end = System.nanoTime();
 				allTime = (double)(end - start) / 1_000_000_000.0;
+			} catch (Exception e) {
+				log("Exception compiling regex: " + e);
 			}
 			MatchResult matchResult = new MatchResult(valid, length, input, regex, matched, allTime);
 			System.out.println(new Gson().toJson(matchResult));

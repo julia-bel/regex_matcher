@@ -4,6 +4,7 @@ LANGUAGE_MAP = {
     'rust': 'src/rust/target/release/query-rust',
     'go': 'src/go/query-go',
     'java': 'src/java/query-java.sh',
+    'cpp': 'src/cpp/query-cpp',
 }
 
 MATCHING_PARAMS = [

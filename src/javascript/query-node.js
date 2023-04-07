@@ -14,11 +14,11 @@ result.time = 0;
 try {
     var re = new RegExp("^" + result.regex + "$");
     result.valid = true;
-    var start = new Date().getTime() / 1000;
+    var start = process.hrtime();
     var matched = result.input.match(re);
-    var final = new Date().getTime() / 1000;
+    var final = process.hrtime();
     result.matched = Boolean(matched);
-    result.time = final - start;
+    result.time = (final[0] - start[0]) + (final[1] - start[1]) / 10**9;
 } catch (e) {
     result.valid = false;
 }

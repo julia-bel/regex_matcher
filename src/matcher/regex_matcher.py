@@ -33,8 +33,11 @@ class RegexMatcher:
     target_file: Optional[str] = None
     visual_file: Optional[str] = None
     encoding: str = 'utf-8'
+
+    def __post_init__(self):
+        self.regex = self._format_regex(self.regex)
     
-    def match(self, timeout: int = 3) -> None:
+    def match(self, timeout: int = 1) -> None:
         if isinstance(self.languages, list):
             paths = [LANGUAGE_MAP[lang] for lang in LANGUAGE_MAP if lang in self.languages]
         else:
@@ -80,7 +83,7 @@ class RegexMatcher:
             except TimeoutExpired:
                 proc.kill()
                 print(f'Timeout in {path}')
-        
+
         for path in paths:
             if target_file is None:
                 proc = Popen([path, word, self.regex])
