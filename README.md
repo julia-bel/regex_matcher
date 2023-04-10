@@ -29,31 +29,35 @@ make
 
 ## Matching
 ```
-python3 main.py filename.json
-```
+usage: main.py [-h] [-v VISUALIZE] [-m] filename
 
-filename.json
-```
-{
-    'regex': str, (target_file regex)
-    'word': str,  (optional, input to match)
-    'attack_group': Dict[str, Any], (optional, dictionary of the format
-        {
-            'prefix': str,
-            'pump': str,
-            'suffix': str,
-            'steps': List[int], ([start, end, step], interval: [start, end))
-        })
-    'languages': List[str], (optional, languages to use, None means all)
-    'target_file': str, (optional, file to save matching results)
-    'visual_file': str, (optional, file to save visualization results)
-    'encoding': str, (optional, global encoding, defaults to 'utf-8')
-}
+positional arguments:
+  filename              path to json file for matching 
+                        {
+                            'regex': str, (target_file regex), 
+                            'word': str, (optional, input to match),
+                            'attack_group': Dict[str, Any], (optional, dictionary of the format 
+                                {
+                                    'prefix': str, 
+                                    'pump': str, 
+                                    'suffix': str, 
+                                    'steps': List[int], ([start, end, step], interval: [start, end)) 
+                                }), 
+                            'languages': List[str], (optional, languages to use, None means all),
+                            'target_file': str, (optional, file to save matching results),
+                            'encoding': str, (optional, global encoding, defaults to 'utf-8') 
+                        }
+
+options:
+  -h, --help            show this help message and exit
+  -v VISUALIZE, --visualize VISUALIZE
+                        path to file for dependency visualization
+  -m, --multiplot       whether to plot several dependency images
 ```
 
 ## Example
 ```
-python3 main.py test/test.json
+python3 main.py test/test.json -v test/visual.png -m
 ```
 <p align="center">
     <img src="test/visual.png"/>

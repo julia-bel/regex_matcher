@@ -2,7 +2,6 @@ from subprocess import PIPE, Popen, TimeoutExpired
 from typing import List, Optional, Any, Dict
 from dataclasses import dataclass
 
-from src.matcher.visualization import plot_dependance
 from src.matcher.constants import LANGUAGE_MAP
 
 
@@ -23,7 +22,6 @@ class RegexMatcher:
             }. Defaults to None.
         languages (Optional[List[str]], optional): languages to use, None means all. Defaults to None.
         target_file (Optional[str], optional): file to save matching results. Defaults to None.
-        visual_file (Optional[str], optional): file to save visualization results. Defaults to None.
         encoding (str, optional): global encoding. Defaults to 'utf-8'.
     """
     regex: str
@@ -31,7 +29,6 @@ class RegexMatcher:
     attack_group: Optional[Dict[str, Any]] = None
     languages: Optional[List[str]] = None
     target_file: Optional[str] = None
-    visual_file: Optional[str] = None
     encoding: str = 'utf-8'
 
     def __post_init__(self):
@@ -56,8 +53,6 @@ class RegexMatcher:
             self._match_word(paths, self.word, write_file, timeout)
         if write_file is not None:
             write_file.close()
-        if self.visual_file is not None and self.target_file is not None:
-            plot_dependance(self.target_file, self.visual_file, encoding=self.encoding)
 
     def _format_regex(self, regex: str) -> str:
         return '(' + regex + ')'

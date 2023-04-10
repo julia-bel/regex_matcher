@@ -1,1 +1,1 @@
-{"target_file":"test/results.txt","regex": "((a*)*)*","attack_group": {"prefix": "","pump": "a","suffix": "b","steps": [10, 20, 1]},"visual_file":"test/visual.png"}
+{"target_file":"test/results.txt","regex": "(a*)*","attack_group": {"prefix":"","pump":"a","suffix":"b","steps": [0, 30, 2]}}

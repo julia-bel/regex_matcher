@@ -35,6 +35,7 @@ public class QueryJava {
 				long end = System.nanoTime();
 				allTime = (double)(end - start) / 1_000_000_000.0;
 			} catch (Exception e) {
+				valid = false;
 				log("Exception compiling regex: " + e);
 			}
 			MatchResult matchResult = new MatchResult(valid, length, input, regex, matched, allTime);

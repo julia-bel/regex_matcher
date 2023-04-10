@@ -1,41 +1,79 @@
-{"input":"aaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":11,"matched":false,"time":0.0009999275207519531}
-{"input": "aaaaaaaaaab", "regex": "((a*)*)*", "language": "python", "valid": true, "length": 11, "matched": false, "time": 0.0625814539998828}
-{"input":"aaaaaaaaaab","language":"rust","length":11,"matched":false,"regex":"((a*)*)*","time":9.637e-6,"valid":true}
-{"input":"aaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":11,"matched":false,"time":0.000006026}
-{"input":"aaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":11,"matched":false,"time":9.56234E-4}
-{"input":"aaaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":12,"matched":false,"time":0.002000093460083008}
-{"input": "aaaaaaaaaaab", "regex": "((a*)*)*", "language": "python", "valid": true, "length": 12, "matched": false, "time": 0.27780724900003406}
-{"input":"aaaaaaaaaaab","language":"rust","length":12,"matched":false,"regex":"((a*)*)*","time":7.312e-6,"valid":true}
-{"input":"aaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":12,"matched":false,"time":0.0000069}
-{"input":"aaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":12,"matched":false,"time":0.001342233}
-{"input":"aaaaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":13,"matched":false,"time":0.005000114440917969}
-{"input": "aaaaaaaaaaaab", "regex": "((a*)*)*", "language": "python", "valid": true, "length": 13, "matched": false, "time": 1.0381903749985213}
-{"input":"aaaaaaaaaaaab","language":"rust","length":13,"matched":false,"regex":"((a*)*)*","time":7.346e-6,"valid":true}
-{"input":"aaaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":13,"matched":false,"time":0.000006531}
-{"input":"aaaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":13,"matched":false,"time":0.001765401}
-{"input":"aaaaaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":14,"matched":false,"time":0.016000032424926758}
-{"input":"aaaaaaaaaaaaab","language":"rust","length":14,"matched":false,"regex":"((a*)*)*","time":7.077e-6,"valid":true}
-{"input":"aaaaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":14,"matched":false,"time":0.000005647}
-{"input":"aaaaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":14,"matched":false,"time":0.002468197}
-{"input":"aaaaaaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":15,"matched":false,"time":0.04700016975402832}
-{"input":"aaaaaaaaaaaaaab","language":"rust","length":15,"matched":false,"regex":"((a*)*)*","time":0.000042819,"valid":true}
-{"input":"aaaaaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":15,"matched":false,"time":0.000006379}
-{"input":"aaaaaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":15,"matched":false,"time":0.00395329}
-{"input":"aaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":16,"matched":false,"time":0.1419999599456787}
-{"input":"aaaaaaaaaaaaaaab","language":"rust","length":16,"matched":false,"regex":"((a*)*)*","time":7.584e-6,"valid":true}
-{"input":"aaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":16,"matched":false,"time":0.000005684}
-{"input":"aaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":16,"matched":false,"time":0.006638102}
-{"input":"aaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":17,"matched":false,"time":0.4309999942779541}
-{"input":"aaaaaaaaaaaaaaaab","language":"rust","length":17,"matched":false,"regex":"((a*)*)*","time":7.442e-6,"valid":true}
-{"input":"aaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":17,"matched":false,"time":0.000005377}
-{"input":"aaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":17,"matched":false,"time":0.013309858}
-{"input":"aaaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"javascript","valid":true,"length":18,"matched":false,"time":1.2940001487731934}
-{"input":"aaaaaaaaaaaaaaaaab","language":"rust","length":18,"matched":false,"regex":"((a*)*)*","time":7.356e-6,"valid":true}
-{"input":"aaaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":18,"matched":false,"time":0.000006479}
-{"input":"aaaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":18,"matched":false,"time":0.024259288}
-{"input":"aaaaaaaaaaaaaaaaaab","language":"rust","length":19,"matched":false,"regex":"((a*)*)*","time":7.479e-6,"valid":true}
-{"input":"aaaaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":19,"matched":false,"time":0.000005917}
-{"input":"aaaaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":19,"matched":false,"time":0.044347209}
-{"input":"aaaaaaaaaaaaaaaaaaab","language":"rust","length":20,"matched":false,"regex":"((a*)*)*","time":7.412e-6,"valid":true}
-{"input":"aaaaaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"go","valid":true,"length":20,"matched":false,"time":0.000005588}
-{"input":"aaaaaaaaaaaaaaaaaaab","regex":"((a*)*)*","language":"java","valid":true,"length":20,"matched":false,"time":0.062042806}
+{"input":"b","regex":"((a*)*)","language":"javascript","valid":true,"length":1,"matched":false,"time":0.000074559}
+{"input": "b", "regex": "((a*)*)", "language": "python", "valid": true, "length": 1, "matched": false, "time": 2.5230001483578235e-06}
+{"input":"b","language":"rust","length":1,"matched":false,"regex":"((a*)*)","time":8.507e-6,"valid":true}
+{"input":"b","regex":"((a*)*)","language":"go","valid":true,"length":1,"matched":false,"time":0.000007175}
+{"input":"b","regex":"((a*)*)","language":"java","valid":true,"length":1,"matched":false,"time":3.1608E-5}
+{"input":"b","language":"cpp","length":1,"matched":false,"regex":"((a*)*)","time":9.000000318337698e-06,"valid":true}
+{"input":"aab","regex":"((a*)*)","language":"javascript","valid":true,"length":3,"matched":false,"time":0.00006035}
+{"input": "aab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 3, "matched": false, "time": 3.947999175579753e-06}
+{"input":"aab","language":"rust","length":3,"matched":false,"regex":"((a*)*)","time":0.000010249,"valid":true}
+{"input":"aab","regex":"((a*)*)","language":"go","valid":true,"length":3,"matched":false,"time":0.000007853}
+{"input":"aab","regex":"((a*)*)","language":"java","valid":true,"length":3,"matched":false,"time":3.7269E-5}
+{"input":"aab","language":"cpp","length":3,"matched":false,"regex":"((a*)*)","time":1.2999999853491317e-05,"valid":true}
+{"input":"aaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":5,"matched":false,"time":0.000064479}
+{"input": "aaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 5, "matched": false, "time": 4.247000106261112e-06}
+{"input":"aaaab","language":"rust","length":5,"matched":false,"regex":"((a*)*)","time":7.704e-6,"valid":true}
+{"input":"aaaab","regex":"((a*)*)","language":"go","valid":true,"length":5,"matched":false,"time":0.00000624}
+{"input":"aaaab","regex":"((a*)*)","language":"java","valid":true,"length":5,"matched":false,"time":4.5591E-5}
+{"input":"aaaab","language":"cpp","length":5,"matched":false,"regex":"((a*)*)","time":4.8999998398358e-05,"valid":true}
+{"input":"aaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":7,"matched":false,"time":0.000064308}
+{"input": "aaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 7, "matched": false, "time": 8.877000254869927e-06}
+{"input":"aaaaaab","language":"rust","length":7,"matched":false,"regex":"((a*)*)","time":0.000010352,"valid":true}
+{"input":"aaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":7,"matched":false,"time":0.00000693}
+{"input":"aaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":7,"matched":false,"time":5.1427E-5}
+{"input":"aaaaaab","language":"cpp","length":7,"matched":false,"regex":"((a*)*)","time":0.0003370000049471855,"valid":true}
+{"input":"aaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":9,"matched":false,"time":0.000073479}
+{"input": "aaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 9, "matched": false, "time": 1.608300044608768e-05}
+{"input":"aaaaaaaab","language":"rust","length":9,"matched":false,"regex":"((a*)*)","time":7.812e-6,"valid":true}
+{"input":"aaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":9,"matched":false,"time":0.000005357}
+{"input":"aaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":9,"matched":false,"time":5.8452E-5}
+{"input":"aaaaaaaab","language":"cpp","length":9,"matched":false,"regex":"((a*)*)","time":0.0032450000289827585,"valid":true}
+{"input":"aaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":11,"matched":false,"time":0.000075642}
+{"input": "aaaaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 11, "matched": false, "time": 5.581400000664871e-05}
+{"input":"aaaaaaaaaab","language":"rust","length":11,"matched":false,"regex":"((a*)*)","time":7.718e-6,"valid":true}
+{"input":"aaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":11,"matched":false,"time":0.000006125}
+{"input":"aaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":11,"matched":false,"time":7.465E-5}
+{"input":"aaaaaaaaaab","language":"cpp","length":11,"matched":false,"regex":"((a*)*)","time":0.026374999433755875,"valid":true}
+{"input":"aaaaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":13,"matched":false,"time":0.000118272}
+{"input": "aaaaaaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 13, "matched": false, "time": 0.00019803699979092926}
+{"input":"aaaaaaaaaaaab","language":"rust","length":13,"matched":false,"regex":"((a*)*)","time":7.621e-6,"valid":true}
+{"input":"aaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":13,"matched":false,"time":0.000005523}
+{"input":"aaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":13,"matched":false,"time":8.6494E-5}
+{"input":"aaaaaaaaaaaab","language":"cpp","length":13,"matched":false,"regex":"((a*)*)","time":0.24960899353027344,"valid":true}
+{"input":"aaaaaaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":15,"matched":false,"time":0.000255338}
+{"input": "aaaaaaaaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 15, "matched": false, "time": 0.0009302590005972888}
+{"input":"aaaaaaaaaaaaaab","language":"rust","length":15,"matched":false,"regex":"((a*)*)","time":7.718e-6,"valid":true}
+{"input":"aaaaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":15,"matched":false,"time":0.000005707}
+{"input":"aaaaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":15,"matched":false,"time":9.7285E-5}
+{"input":"aaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":17,"matched":false,"time":0.000849685}
+{"input": "aaaaaaaaaaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 17, "matched": false, "time": 0.003403929999876709}
+{"input":"aaaaaaaaaaaaaaaab","language":"rust","length":17,"matched":false,"regex":"((a*)*)","time":7.976e-6,"valid":true}
+{"input":"aaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":17,"matched":false,"time":0.000005922}
+{"input":"aaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":17,"matched":false,"time":1.63478E-4}
+{"input":"aaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":19,"matched":false,"time":0.003411819}
+{"input": "aaaaaaaaaaaaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 19, "matched": false, "time": 0.01555291499971645}
+{"input":"aaaaaaaaaaaaaaaaaab","language":"rust","length":19,"matched":false,"regex":"((a*)*)","time":0.000010007,"valid":true}
+{"input":"aaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":19,"matched":false,"time":0.000007884}
+{"input":"aaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":19,"matched":false,"time":1.65566E-4}
+{"input":"aaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":21,"matched":false,"time":0.015029303}
+{"input": "aaaaaaaaaaaaaaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 21, "matched": false, "time": 0.06381298399992374}
+{"input":"aaaaaaaaaaaaaaaaaaaab","language":"rust","length":21,"matched":false,"regex":"((a*)*)","time":8.255e-6,"valid":true}
+{"input":"aaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":21,"matched":false,"time":0.000011876}
+{"input":"aaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":21,"matched":false,"time":1.88417E-4}
+{"input":"aaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":23,"matched":false,"time":0.050627341}
+{"input": "aaaaaaaaaaaaaaaaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 23, "matched": false, "time": 0.20577996800057008}
+{"input":"aaaaaaaaaaaaaaaaaaaaaab","language":"rust","length":23,"matched":false,"regex":"((a*)*)","time":7.642e-6,"valid":true}
+{"input":"aaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":23,"matched":false,"time":0.000006065}
+{"input":"aaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":23,"matched":false,"time":1.93384E-4}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":25,"matched":false,"time":0.216506803}
+{"input": "aaaaaaaaaaaaaaaaaaaaaaaab", "regex": "((a*)*)", "language": "python", "valid": true, "length": 25, "matched": false, "time": 0.818490106000354}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaab","language":"rust","length":25,"matched":false,"regex":"((a*)*)","time":7.81e-6,"valid":true}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":25,"matched":false,"time":0.000018063}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":25,"matched":false,"time":2.66697E-4}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"javascript","valid":true,"length":27,"matched":false,"time":0.899850442}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaaaab","language":"rust","length":27,"matched":false,"regex":"((a*)*)","time":7.945e-6,"valid":true}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":27,"matched":false,"time":0.000012444}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":27,"matched":false,"time":2.80107E-4}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaaaaaab","language":"rust","length":29,"matched":false,"regex":"((a*)*)","time":8.796e-6,"valid":true}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"go","valid":true,"length":29,"matched":false,"time":0.00000671}
+{"input":"aaaaaaaaaaaaaaaaaaaaaaaaaaaab","regex":"((a*)*)","language":"java","valid":true,"length":29,"matched":false,"time":3.30907E-4}
