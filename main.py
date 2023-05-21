@@ -15,13 +15,11 @@ def main(encoding: str = 'utf-8'):
         help='''path to json file for matching\n{
         'regex': str, (target_file regex),
         'word': str,  (optional, input to match),
-        'attack_group': Dict[str, Any], (optional, dictionary of the format
-            {
-                'prefix': str,
-                'pump': str,
-                'suffix': str,
-                'steps': List[int], ([start, end, step], interval: [start, end))
-            }),
+        'pump': Dict[str, Any], (optional, dictionary of the format:
+        {
+            'attack': List[List[str]|str], (e.g. [["a", "1"], "b", ["a", "1"]])
+            'steps': Dict[str, List[int]], (e.g. {"1": [start, end, step]}, [start, end))
+        }),
         'languages': List[str], (optional, languages to use, None means all),
         'target_file': str, (optional, file to save matching results),
         'encoding': str, (optional, global encoding, defaults to 'utf-8')\n}''')
@@ -44,4 +42,5 @@ def main(encoding: str = 'utf-8'):
                 encoding=encoding, multiplot=args.multiplot)
 
 
-main()
+if __name__ == '__main__':
+    main()

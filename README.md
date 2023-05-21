@@ -6,7 +6,7 @@ Matching regular expressions with words or groups of pumping words in Java, Pyth
 ```
 sudo apt-get install make default-jdk maven nodejs cargo golang-go python3-pip g++
 ```
-2. Set the environment variable `REGEX_MATCHER_ROOT={path}/regex_matcher`
+2. Set the environment variable `export REGEX_MATCHER_ROOT={path}/regex_matcher`
 3. Configure files
 ```
 # go
@@ -36,16 +36,14 @@ positional arguments:
                         {
                             'regex': str, (target_file regex), 
                             'word': str, (optional, input to match),
-                            'attack_group': Dict[str, Any], (optional, dictionary of the format 
-                                {
-                                    'prefix': str, 
-                                    'pump': str, 
-                                    'suffix': str, 
-                                    'steps': List[int], ([start, end, step], interval: [start, end)) 
-                                }), 
+                            'pump': Dict[str, Any], (optional, dictionary of the format:
+                            {
+                                'attack': List[List[str]|str], (e.g. [["a", "1"], "b", ["a", "1"]])
+                                'steps': Dict[str, List[int]], (e.g. {"1": [start, end, step]}, [start, end))
+                            }),
                             'languages': List[str], (optional, languages to use, None means all),
                             'target_file': str, (optional, file to save matching results),
-                            'encoding': str, (optional, global encoding, defaults to 'utf-8') 
+                            'encoding': str, (optional, global encoding, defaults to 'utf-8')
                         }
 
 options:
